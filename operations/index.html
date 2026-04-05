@@ -29,55 +29,46 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 6%;display:flex
 /* HERO */
 .hero{min-height:80vh;display:flex;align-items:center;padding:120px 6% 80px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,.06) 0%,transparent 60%)}
-.hero-inner{max-width:700px;position:relative;z-index:1}
+.hero-inner{max-width:900px;position:relative;z-index:1}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:28px;padding:6px 14px;border:1px solid rgba(201,168,76,.3);border-radius:3px}
 h1{font-size:clamp(36px,6vw,64px);font-weight:900;letter-spacing:-2px;line-height:1.1;margin-bottom:24px;color:#fff}
 h1 span{color:var(--accent)}
-.hero-sub{font-size:18px;color:var(--muted);max-width:520px;line-height:1.8;margin-bottom:32px}
+.hero-sub{font-size:17px;color:var(--muted);max-width:700px;line-height:1.8;margin-bottom:32px}
 .hero-divider{width:48px;height:2px;background:var(--accent);margin-bottom:24px}
 
 /* SECTIONS */
 section{padding:96px 6%}
-.section-inner{max-width:1100px;margin:0 auto}
+.section-inner{max-width:900px;margin:0 auto}
 .section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:16px}
-h2{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-1.5px;color:#fff;margin-bottom:24px}
-.section-intro{font-size:17px;color:var(--muted);max-width:600px;line-height:1.8;margin-bottom:48px}
-p{font-size:16px;color:var(--muted);line-height:1.9;margin-bottom:16px}
+h2{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-1.5px;color:#fff;margin-bottom:32px;margin-top:56px}
+h2:first-of-type{margin-top:0}
+p{font-size:16px;color:var(--muted);line-height:1.9;margin-bottom:20px}
+strong{color:#fff}
 
-/* TIMELINE */
-.timeline{margin:48px 0}
-.timeline-item{margin-bottom:56px;padding-left:36px;border-left:2px solid var(--accent)}
-.timeline-item h3{font-size:20px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.5px}
-.timeline-item p{margin-bottom:12px}
-.timeline-item ul{margin-left:20px;margin-bottom:16px}
-.timeline-item li{margin-bottom:8px;font-size:16px;color:var(--muted)}
-.media-links{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
-.media-link{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid rgba(201,168,76,.4);padding:8px 16px;border-radius:4px;letter-spacing:.5px;transition:.2s}
-.media-link:hover{background:var(--accent-dim)}
+/* DIVIDERS */
+.divider{width:48px;height:1px;background:var(--accent);margin:60px 0;opacity:.5}
 
 /* IMAGE GALLERY */
-.gallery-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:96px 6%}
-.gallery-section .section-inner{max-width:1100px;margin:0 auto}
-.image-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
-@media(max-width:768px){.image-gallery{grid-template-columns:1fr}}
-.image-gallery img{width:100%;height:auto;border-radius:4px;display:block}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin:48px 0}
+@media(max-width:768px){.gallery{grid-template-columns:1fr}}
+.gallery img{width:100%;height:auto;border-radius:4px;display:block}
 
-/* RECOGNITION */
-.recognition-box{background:var(--surface);border:1px solid var(--border);padding:32px;margin:24px 0;border-radius:4px}
-.recognition-box h4{font-size:15px;font-weight:800;color:#fff;margin-bottom:16px;letter-spacing:-.3px;text-transform:uppercase}
-.recognition-box ul{margin-left:20px}
-.recognition-box li{font-size:15px;color:var(--muted);margin-bottom:10px;line-height:1.7}
-.recognition-box li strong{color:var(--accent)}
+/* MEDIA LINKS */
+.media-list{margin:24px 0}
+.media-item{margin-bottom:12px}
+.media-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:12px;display:block}
+.media-link{display:inline-block;font-size:15px;color:var(--muted);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);padding-bottom:4px;transition:.2s;margin-right:20px;margin-bottom:8px}
+.media-link:hover{color:var(--accent);border-bottom-color:var(--accent)}
 
 /* CTA */
 .cta-section{text-align:center;margin:80px 0}
-.cta-section h2{margin-bottom:16px}
-.cta-section p{display:inline-block;max-width:600px}
 .cta-button{display:inline-block;background:var(--accent);color:#0b0c0e;padding:14px 32px;font-size:14px;font-weight:800;text-decoration:none;letter-spacing:.5px;border-radius:4px;transition:.2s;margin-top:32px}
 .cta-button:hover{opacity:.85}
 
 /* CONTACT FORM */
-.contact-form{background:var(--surface);border:1px solid var(--border);padding:48px;border-radius:4px;max-width:600px;margin:0 auto;margin-top:40px}
+.contact-box{background:var(--surface);border:1px solid var(--border);padding:48px;border-radius:4px;max-width:600px;margin:40px auto 0}
+.contact-box h2{margin-top:0}
+.contact-form{margin-top:32px}
 .contact-form input,.contact-form textarea{width:100%;padding:12px 16px;margin-bottom:16px;background:var(--bg);border:1px solid var(--border);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;border-radius:4px;transition:.2s}
 .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
 .contact-form button{width:100%;background:var(--accent);color:#0b0c0e;padding:14px 32px;font-size:14px;font-weight:800;border:none;border-radius:4px;cursor:pointer;letter-spacing:.5px;transition:.2s}
@@ -104,149 +95,120 @@ footer a:hover{color:var(--accent)}
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Operations · Crisis Response</div>
+    <div class="hero-badge">Media & Operations</div>
     <div class="hero-divider"></div>
-    <h1>Global Crisis<br>Response &<br>Evacuation.</h1>
-    <p class="hero-sub">28+ years coordinating complex civilian evacuations and crisis response operations across high-risk conflict zones in coordination with governments, international organizations, and private security networks.</p>
+    <h1>Global Crisis Response &<br>Evacuation Operations</h1>
+    <p class="hero-sub">Admir Barčić has led and supported some of the most complex civilian evacuation (EVAC) and crisis response operations in recent history, operating across high-risk conflict zones in coordination with governments, international organizations, and private security networks.</p>
   </div>
 </div>
 
-<!-- OPERATIONS OVERVIEW -->
+<!-- MAIN CONTENT -->
 <section>
   <div class="section-inner">
     <a href="/" class="back-link">← Back to Home</a>
-    <div class="section-label">Overview</div>
-    <h2>Operational Expertise</h2>
-    <p>Admir Barčić has led and supported some of the most complex civilian evacuation (EVAC) and crisis response operations in recent history, operating across high-risk conflict zones in coordination with governments, international organizations, and private security networks.</p>
-    <p>With over 28 years of field experience, his work spans Afghanistan, Ukraine, the Middle East, and Africa, with a particular focus on high-threat extractions, humanitarian corridors, and strategic evacuation logistics.</p>
-  </div>
-</section>
 
-<!-- IMAGE GALLERY -->
-<section class="gallery-section">
-  <div class="section-inner">
-    <div class="section-label">Field Operations</div>
-    <h2 style="margin-bottom:8px">28+ Years of Experience</h2>
-    <div class="image-gallery">
-      <img src="admir-1.jpg" alt="Admir Barčić - Field Operations Security Professional">
-      <img src="admir-2.jpg" alt="Global Crisis Response & Risk Management">
-      <img src="admir-3.jpg" alt="Evacuation Operations Coordination">
+    <p>With over 28 years of field experience, his work spans Afghanistan, Ukraine, the Middle East, and Africa, with a particular focus on high-threat extractions, humanitarian corridors, and strategic evacuation logistics.</p>
+
+    <div class="gallery">
+      <img src="admir-1.jpg" alt="Admir Barčić - Field Operations">
+      <img src="admir-2.jpg" alt="Global Crisis Response">
+      <img src="admir-3.jpg" alt="Evacuation Operations">
       <img src="admir-4.jpg" alt="International Security Operations">
     </div>
-  </div>
-</section>
 
-<!-- MAJOR OPERATIONS -->
-<section>
-  <div class="section-inner">
-    <div class="section-label">Operations Timeline</div>
-    <h2>Major Assignments</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Afghanistan Evacuations (2021–2022)</h3>
-        <p>Key operational role in large-scale evacuation missions in cooperation with international partners, including humanitarian organizations such as Mercury One and the Nazarene Fund. Operations contributed to the evacuation of thousands of at-risk individuals, including women, children, government officials, judges, and military personnel.</p>
-        <p><strong>Key Contributions:</strong></p>
-        <ul>
-          <li>Coordination of evacuation routes and aircraft logistics</li>
-          <li>Establishment of regional transit hubs (Montenegro)</li>
-          <li>Multi-organizational cooperation and strategic planning</li>
-          <li>Risk assessment and threat mitigation in volatile conditions</li>
-        </ul>
-        <div class="media-links">
-          <a href="#" class="media-link">Vijesti – Afghan Evacuations</a>
-          <a href="https://www.rferl.org/a/afghanistan-refugees-temporary-shelter/31436583.html" class="media-link" target="_blank">RFE/RL – Humanitarian Hub</a>
-        </div>
-      </div>
+    <div class="divider"></div>
 
-      <div class="timeline-item">
-        <h3>Gulf Crisis Evacuation (2026)</h3>
-        <p>Successfully coordinated the evacuation of over 900 Slovenian citizens from an active conflict zone in the Gulf region during high-risk conditions. This complex mission required rapid coordination under volatile security conditions and involved multi-layered cooperation with governmental and intelligence structures.</p>
-        <p><strong>Operation Details:</strong></p>
-        <ul>
-          <li>Largest evacuation response in the region</li>
-          <li>Fastest execution timeline for such operations</li>
-          <li>Official government recognition from Slovenia</li>
-          <li>Coordination with state intelligence authorities</li>
-          <li>Real-time crisis response in active conflict</li>
-        </ul>
-        <p style="margin-top:12px"><strong>Official Recognition:</strong> Government of Slovenia – "Evacuation of citizens from the Middle East"</p>
-      </div>
+    <h2>Afghanistan Evacuations (2021–2022)</h2>
 
-      <div class="timeline-item">
-        <h3>Ukraine & International Operations</h3>
-        <p>Participated in evacuation and crisis response operations related to the conflict in Ukraine, operating within multinational frameworks involving both governmental and private-sector coordination.</p>
-        <p><strong>Specialization:</strong> Secure extraction, risk mitigation, and operational planning in dynamic and hostile conditions.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <p>During the collapse of Afghanistan in 2021, Admir Barčić played a key operational role in large-scale evacuation missions in cooperation with international partners, including humanitarian and non-governmental organizations such as Mercury One and the Nazarene Fund.</p>
 
-<!-- RECOGNITION -->
-<section style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-  <div class="section-inner">
-    <div class="section-label">Recognition</div>
-    <h2>International Standing</h2>
-    <p>Admir's decades of work in high-risk environments have earned formal recognition and partnerships with governments, international organizations, and private sector leaders worldwide.</p>
+    <p>These operations contributed to the evacuation of thousands of at-risk individuals, including women, children, government officials, judges, and military personnel.</p>
 
-    <div class="recognition-box">
-      <h4>Governmental & Intelligence Partners</h4>
-      <ul>
-        <li><strong>Slovenia:</strong> Prime Minister recognition for Gulf evacuations</li>
-        <li><strong>Libya:</strong> Former Transitional President Dr. Mohamed Magarif</li>
-        <li><strong>United States:</strong> General John Allen (former Commander Iraq & Afghanistan)</li>
-        <li><strong>U.S. State Department:</strong> Recognized within diplomatic networks</li>
-      </ul>
+    <p>Barčić was directly involved in the coordination of evacuation routes, aircraft logistics, and the establishment of regional transit hubs, including Montenegro, which served as a temporary relocation and processing point for evacuees.</p>
+
+    <div class="media-list">
+      <span class="media-label">Featured Media</span>
+      <a href="#" class="media-link">Vijesti – Afghans in Montenegro for 35 million dollars</a><br>
+      <a href="#" class="media-link">Avaz – Afghan evacuations and regional operations</a><br>
+      <a href="https://www.rferl.org/a/afghanistan-refugees-temporary-shelter/31436583.html" target="_blank" class="media-link">Radio Free Europe – Montenegro as a humanitarian evacuation hub</a>
     </div>
 
-    <div class="recognition-box">
-      <h4>International Organizations</h4>
-      <ul>
-        <li><strong>Interpol:</strong> Operational coordination</li>
-        <li><strong>Europol:</strong> Security collaboration</li>
-        <li><strong>UN-affiliated bodies:</strong> Crisis response partnerships</li>
-        <li><strong>International Police Organization (IPO):</strong> Special consultative status with UN framework</li>
-      </ul>
+    <div class="divider"></div>
+
+    <h2>Slovenia National Media Coverage</h2>
+
+    <p>During the Afghanistan crisis, Admir Barčić was featured as a field expert and operational source in Slovenian national media, providing real-time insights into the situation on the ground.</p>
+
+    <p>His reporting highlighted the security risks, collapse of institutional systems, and urgent evacuation needs during the Taliban takeover.</p>
+
+    <div class="media-list">
+      <span class="media-label">Featured Media</span>
+      <a href="#" class="media-link">24ur – Live reporting and field analysis from Afghanistan</a>
     </div>
 
-    <div class="recognition-box">
-      <h4>Private Sector Leadership</h4>
-      <ul>
-        <li><strong>AGRM:</strong> Leadership role</li>
-        <li><strong>SecuSecurity:</strong> Partnership & advisory</li>
-        <li><strong>Zeus Actual:</strong> Strategic leadership</li>
-        <li><strong>Stratex Group:</strong> 14+ years as Global Business Development Director</li>
-        <li><strong>SECU (Riyadh):</strong> Former Global Director</li>
-      </ul>
+    <div class="divider"></div>
+
+    <h2>Refugee & Humanitarian Operations – Montenegro</h2>
+
+    <p>As part of the Afghanistan evacuation efforts, Admir Barčić contributed to the development and execution of humanitarian relocation initiatives in Montenegro.</p>
+
+    <p>These efforts included planning and coordination of temporary accommodation, logistics, and processing systems for evacuees in cooperation with international partners.</p>
+
+    <p>Montenegro served as a strategic transit hub, enabling the safe relocation of evacuees onward to third countries.</p>
+
+    <div class="divider"></div>
+
+    <h2>Gulf Crisis Evacuation (2026)</h2>
+
+    <p>In one of the most recent high-risk operations, Admir Barčić was involved in the evacuation of over 900 Slovenian citizens from an active conflict zone in the Gulf region.</p>
+
+    <p>This complex mission required rapid coordination under volatile security conditions and involved multi-layered cooperation with governmental and intelligence structures.</p>
+
+    <p>The operation was officially recognized by Slovenian state authorities and stands as one of the fastest and most efficient evacuation responses in the region.</p>
+
+    <div class="media-list">
+      <span class="media-label">Official Reference</span>
+      <p style="margin-bottom:0">Government of Slovenia – "Evacuation of citizens from the Middle East"</p>
     </div>
+
+    <div class="divider"></div>
+
+    <h2>Ukraine & International Operations</h2>
+
+    <p>Admir Barčić has also participated in evacuation and crisis response operations related to the conflict in Ukraine, operating within multinational frameworks involving both governmental and private-sector coordination.</p>
+
+    <p>His work in these environments focuses on secure extraction, risk mitigation, and operational planning in dynamic and hostile conditions.</p>
+
+    <div class="divider"></div>
+
+    <h2>Operational Recognition & Industry Standing</h2>
+
+    <p>Through decades of work in high-risk environments, Admir Barčić has earned formal recognition and partnerships with governments, international organizations, and private sector leaders worldwide.</p>
+
   </div>
 </section>
 
 <!-- CTA -->
-<section>
+<section style="text-align:center">
   <div class="section-inner">
-    <div class="cta-section">
-      <h2>Discuss Your Security Needs</h2>
-      <p>With 28+ years of field experience across conflict zones and crisis operations, Admir provides strategic consultation on evacuation planning, risk management, and international security coordination.</p>
-      <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch &rarr;</button>
-    </div>
+    <h2>Ready to Discuss Your Security Needs</h2>
+    <p>With 28+ years of field experience across conflict zones and crisis operations, Admir provides strategic consultation on evacuation planning, risk management, and international security coordination.</p>
+    <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch &rarr;</button>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-inner">
-    <div style="text-align:center;max-width:600px;margin:0 auto">
-      <div class="section-label" style="text-align:center">Contact</div>
-      <h2>Ready to Discuss Your Needs</h2>
-      <p>For operational consulting, crisis response coordination, or security briefings, send an enquiry below. All communications handled in strict confidence.</p>
-      <div class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Subject" required>
-        <textarea placeholder="Your Enquiry (Details about your security or crisis response needs)" rows="6" required></textarea>
-        <button type="submit">Send Enquiry &rarr;</button>
-      </div>
-    </div>
+  <div class="contact-box">
+    <h2>Send Your Enquiry</h2>
+    <p>For operational consulting, crisis response coordination, or security briefings. All communications handled in strict confidence.</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea placeholder="Your Enquiry" rows="6" required></textarea>
+      <button type="submit">Send Enquiry &rarr;</button>
+    </form>
   </div>
 </section>
 
