@@ -38,27 +38,88 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Admir Barcic",
-  "jobTitle": "Global Director, Security & Risk Management",
-  "description": "Global Director with 28+ years of security and risk management experience across Iraq, Afghanistan, Libya, South Sudan, Nigeria and Ukraine.",
-  "url": "https://admirbarcic.com",
-  "image": "https://admirbarcic.com/admir.jpg",
-  "sameAs": [],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Evolution Global Risk Management"
-  },
-  "knowsAbout": [
-    "Security Risk Management",
-    "Crisis Management",
-    "Threat Assessment",
-    "Close Protection",
-    "Hostile Environment Operations",
-    "Multi-jurisdictional Operations"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://admirbarcic.com/#person",
+      "name": "Admir Barčić",
+      "alternateName": "Admir Barcic",
+      "jobTitle": "Global Director, Security & Risk Management",
+      "description": "Security and risk management strategist with 28+ years of field experience across Iraq, Afghanistan, Libya, South Sudan, Nigeria and Ukraine. Board Member at the International Police Organization (IPO HQ). PMC Instructor.",
+      "url": "https://admirbarcic.com/",
+      "image": "https://admirbarcic.com/admir.jpg",
+      "nationality": {"@type": "Country", "name": "Bosnia and Herzegovina"},
+      "workLocation": [
+        {"@type": "Country", "name": "Slovenia"},
+        {"@type": "Country", "name": "Montenegro"}
+      ],
+      "email": "ab@admirbarcic.com",
+      "worksFor": {"@id": "https://admirbarcic.com/#egrm"},
+      "memberOf": {"@id": "https://admirbarcic.com/#ipo"},
+      "knowsAbout": [
+        "Security Risk Management",
+        "Crisis Management",
+        "Civilian Evacuation Operations",
+        "Threat Assessment",
+        "Close Protection",
+        "Hostile Environment Operations",
+        "Multi-jurisdictional Operations",
+        "Humanitarian Logistics",
+        "Private Military Contracting"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Security & Risk Management Director",
+        "occupationalCategory": "Security Services"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://admirbarcic.com/#egrm",
+      "name": "Evolution Global Risk Management",
+      "description": "Global risk management firm providing security, crisis response and evacuation services to governments, international organisations and private clients.",
+      "employee": {"@id": "https://admirbarcic.com/#person"}
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://admirbarcic.com/#ipo",
+      "name": "International Police Organization",
+      "alternateName": "IPO HQ"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://admirbarcic.com/#service",
+      "name": "Admir Barčić — Security & Risk Consulting",
+      "url": "https://admirbarcic.com/",
+      "provider": {"@id": "https://admirbarcic.com/#person"},
+      "areaServed": {"@type": "Place", "name": "Worldwide"},
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://admirbarcic.com/#contact",
+        "availableLanguage": ["English", "Slovenian", "Bosnian"]
+      },
+      "serviceType": [
+        "Personnel Repatriation",
+        "Close Protection",
+        "Crisis Extraction",
+        "Security Assessment",
+        "Secure Escort and Transfer",
+        "Logistics and Multi-jurisdictional Coordination"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://admirbarcic.com/#website",
+      "url": "https://admirbarcic.com/",
+      "name": "Admir Barčić",
+      "publisher": {"@id": "https://admirbarcic.com/#person"},
+      "inLanguage": "en"
+    }
   ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -143,10 +204,12 @@ footer a:hover{color:var(--accent)}
 <body>
 
 <nav>
-  <div class="logo">Admir <span>Barcic</span></div>
-  <div style="display:flex;gap:24px">
-    <a href="#operations" class="nav-contact" style="border:none;background:transparent;padding:0">Operations</a>
-    <a href="#contact" class="nav-contact">Get In Touch</a>
+  <a href="/" class="logo" style="text-decoration:none">Admir <span>Barcic</span></a>
+  <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+    <a href="/about.html" class="nav-contact" style="border:none;background:transparent;padding:0">About</a>
+    <a href="/capabilities.html" class="nav-contact" style="border:none;background:transparent;padding:0">Capabilities</a>
+    <a href="/operations/" class="nav-contact" style="border:none;background:transparent;padding:0">Operations</a>
+    <a href="/contact.html" class="nav-contact">Get In Touch</a>
   </div>
 </nav>
 
@@ -171,10 +234,10 @@ footer a:hover{color:var(--accent)}
     <p style="margin-bottom:40px">With over 28 years of field experience, his work spans Afghanistan, Ukraine, the Middle East, and Africa, with a particular focus on high-threat extractions, humanitarian corridors, and strategic evacuation logistics.</p>
 
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin:48px 0">
-      <img src="admir-ops-1.jpg" alt="Admir Barčić - Field Operations" style="width:100%;border-radius:4px">
-      <img src="admir-ops-2.jpg" alt="Global Crisis Response" style="width:100%;border-radius:4px">
-      <img src="admir-ops-3.jpg" alt="Evacuation Operations" style="width:100%;border-radius:4px">
-      <img src="admir-ops-4.jpg" alt="International Security Operations" style="width:100%;border-radius:4px">
+      <img src="admir-ops-1.jpg" alt="Admir Barčić coordinating field operations in a high-risk zone" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px">
+      <img src="admir-ops-2.jpg" alt="Global crisis response operations overseen by Admir Barčić" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px">
+      <img src="admir-ops-3.jpg" alt="Civilian evacuation operations coordinated by Admir Barčić" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px">
+      <img src="admir-ops-4.jpg" alt="International security operations with Admir Barčić" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px">
     </div>
 
     <h3 style="font-size:20px;font-weight:800;color:#fff;margin:56px 0 24px">Afghanistan Evacuations (2021–2022)</h3>
@@ -306,8 +369,16 @@ footer a:hover{color:var(--accent)}
 
 <footer>
   <p>&copy; 2026 Admir Barcic. All enquiries handled in strict confidence.</p>
-  <a href="mailto:ab@admirbarcic.com">ab@admirbarcic.com</a>
+  <div style="display:flex;gap:20px;flex-wrap:wrap">
+    <a href="/about.html">About</a>
+    <a href="/capabilities.html">Capabilities</a>
+    <a href="/operations/">Operations</a>
+    <a href="/contact.html">Contact</a>
+    <a href="mailto:ab@admirbarcic.com">ab@admirbarcic.com</a>
+  </div>
 </footer>
+
+<script src="/js/analytics.js" defer></script>
 
 </body>
 </html>

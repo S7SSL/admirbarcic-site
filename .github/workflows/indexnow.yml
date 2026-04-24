@@ -1,0 +1,53 @@
+name: IndexNow ping
+
+# Fires on every push to main that touches a deployable file. Submits the
+# sitemap URLs to IndexNow (Bing/Yandex/Seznam/Naver) so they crawl fresh
+# URLs within minutes instead of waiting for normal discovery.
+#
+# Verification file at the site root: /f88de6408fa6457296dfc7c0809c44d1.txt
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'js/**'
+      - 'css/**'
+      - 'CNAME'
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for GitHub Pages to rebuild
+        run: sleep 60
+
+      - name: Extract URLs from sitemap.xml
+        run: |
+          python3 - <<'PY'
+          import re, json, pathlib
+          sm = pathlib.Path('sitemap.xml').read_text()
+          urls = re.findall(r'<loc>(.*?)</loc>', sm)
+          print('Found URLs:', urls)
+          pathlib.Path('urls.json').write_text(json.dumps({
+            "host": "admirbarcic.com",
+            "key": "f88de6408fa6457296dfc7c0809c44d1",
+            "keyLocation": "https://admirbarcic.com/f88de6408fa6457296dfc7c0809c44d1.txt",
+            "urlList": urls
+          }))
+          PY
+
+      - name: Submit to IndexNow
+        run: |
+          echo "Payload:"
+          cat urls.json
+          echo ""
+          curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data-binary @urls.json \
+            -w "\nHTTP %{http_code}\n"
