@@ -1,0 +1,60 @@
+/* site.css — shared navigation, footer and layout rhythm.
+   Loaded by every page before any page-specific styles. */
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+--bg:#0b0c0e;
+--surface:#111318;
+--border:#1e2229;
+--text:#e8eaed;
+--muted:#8b949e;
+--accent:#c9a84c;
+--accent-dim:rgba(201,168,76,.1);
+--nav-h:66px;
+}
+
+/* Fixed nav overlaps in-page anchors without this. */
+[id]{scroll-margin-top:calc(var(--nav-h) + 24px)}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;min-height:var(--nav-h);padding:14px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--border);background:rgba(11,12,14,.94);backdrop-filter:blur(12px)}
+nav .logo{font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text);text-decoration:none;white-space:nowrap}
+nav .logo span{color:var(--accent)}
+nav .nav-links{display:flex;gap:26px;align-items:center}
+nav .nav-link{font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.5px;white-space:nowrap;transition:color .2s}
+nav .nav-link:hover,nav .nav-link[aria-current="page"]{color:var(--accent)}
+nav .nav-cta{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid rgba(201,168,76,.4);padding:8px 18px;border-radius:4px;letter-spacing:.5px;white-space:nowrap;transition:background .2s}
+nav .nav-cta:hover{background:var(--accent-dim)}
+
+/* Hamburger — hidden on desktop */
+.nav-toggle{display:none;width:42px;height:36px;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid rgba(201,168,76,.35);border-radius:4px;cursor:pointer;padding:0 9px}
+.nav-toggle span{display:block;height:2px;width:100%;background:var(--accent);border-radius:2px;transition:transform .22s,opacity .22s}
+nav.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+nav.open .nav-toggle span:nth-child(2){opacity:0}
+nav.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:900px){
+  .nav-toggle{display:flex}
+  nav{flex-wrap:nowrap}
+  nav .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:0 12px 32px rgba(0,0,0,.5);max-height:calc(100vh - var(--nav-h));overflow-y:auto}
+  nav.open .nav-links{display:flex}
+  nav .nav-links>*{padding:15px 6%;border-top:1px solid var(--border)}
+  nav .nav-cta{border:0;border-top:1px solid var(--border);border-radius:0;color:var(--accent)}
+  nav .nav-cta:hover{background:var(--accent-dim)}
+  #ab-lang-switcher{width:100%}
+  #ab-lang-switcher>button{width:100%;justify-content:flex-start}
+}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:28px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer p{font-size:12px;color:var(--muted);margin:0}
+footer .footer-links{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--accent)}
+@media(max-width:640px){
+  footer{flex-direction:column;align-items:flex-start;gap:14px}
+  footer .footer-links{gap:14px 18px}
+}

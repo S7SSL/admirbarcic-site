@@ -157,76 +157,6 @@
 ]
 },
 {
-"@type": "FAQPage",
-"@id": "https://admirbarcic.com/#faq",
-"mainEntity": [
-{
-"@type": "Question",
-"name": "Who is Admir Barčić?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Admir Barčić (also written Admir Barcic) is a security and risk management director with 28+ years of field experience across Iraq, Afghanistan, Libya, South Sudan, Nigeria and Ukraine. He is the Founder of Zeus Actual Intelligence & Security Agency and the Founder and Managing Director of Win-Win Solution, a consulting company specialising in business development, strategic advisory, security consulting, and international project development. He is a former Co-Founder and Director of Shield Security Services, one of Afghanistan's leading private security companies, a Board Member of the International Police Organization (IPO HQ) and a certified PMC instructor. He is based in Slovenia and Montenegro and available internationally."
-}
-},
-{
-"@type": "Question",
-"name": "What services does Admir Barčić provide?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "He provides personnel repatriation, close protection, crisis extraction, security and threat assessment, secure escort and transfer, and multi-jurisdictional logistics coordination for individuals, corporations, NGOs and governments operating in high-risk environments."
-}
-},
-{
-"@type": "Question",
-"name": "Where is Admir Barčić based and which regions does he cover?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "He is based in Slovenia and Montenegro and operates worldwide, with particular depth across the United Kingdom, the Gulf/GCC region, the Balkans, Eastern Europe, the Middle East and Africa. He is available internationally at short notice."
-}
-},
-{
-"@type": "Question",
-"name": "What languages does Admir Barčić speak?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "English, Slovenian and Bosnian at working level."
-}
-},
-{
-"@type": "Question",
-"name": "What major operations has Admir Barčić been involved in?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "He played an operational role in the 2021–2022 Afghanistan evacuations (with partners including Mercury One and the Nazarene Fund), the 2026 Gulf crisis evacuation of over 900 Slovenian citizens recognised by the Government of Slovenia, humanitarian relocation through Montenegro, and crisis-response operations connected to the conflict in Ukraine."
-}
-},
-{
-"@type": "Question",
-"name": "How quickly can Admir Barčić respond to a crisis or extraction request?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Time from activation to wheels-up is typically measured in hours, not days. For urgent or time-sensitive requests, direct email to ab@admirbarcic.com is preferred."
-}
-},
-{
-"@type": "Question",
-"name": "Does Admir Barčić work with governments and NGOs as well as private clients?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes. He works with governments, international organisations, NGOs, corporations, high-net-worth individuals and diplomats. All engagements are handled with strict confidentiality."
-}
-},
-{
-"@type": "Question",
-"name": "How do you contact Admir Barčić?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Email ab@admirbarcic.com. Enquiries are handled confidentially, typically with a response within 24 hours."
-}
-}
-]
-},
-{
 "@type": "WebSite",
 "@id": "https://admirbarcic.com/#website",
 "url": "https://admirbarcic.com/",
@@ -240,25 +170,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
---bg:#0b0c0e;
---surface:#111318;
---border:#1e2229;
---text:#e8eaed;
---muted:#8b949e;
---accent:#c9a84c;
---accent-dim:rgba(201,168,76,.1);
-}
 html,body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:rgba(11,12,14,.92);backdrop-filter:blur(12px)}
-.logo{font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text)}
-.logo span{color:var(--accent)}
-.nav-contact{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid rgba(201,168,76,.4);padding:8px 18px;border-radius:4px;letter-spacing:.5px;transition:.2s}
-.nav-contact:hover{background:var(--accent-dim)}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:120px 6% 80px;position:relative;overflow:hidden}
@@ -273,6 +188,7 @@ h1 span{color:var(--accent)}
 .hero-cta{display:inline-block;background:var(--accent);color:#0b0c0e;padding:14px 32px;font-size:14px;font-weight:800;text-decoration:none;letter-spacing:.5px;border-radius:4px;transition:.2s}
 .hero-cta:hover{opacity:.85}
 .hero-divider{width:48px;height:2px;background:var(--accent);margin-bottom:24px}
+@media(max-width:900px){.hero{min-height:0;padding:112px 6% 64px}.hero-badge{line-height:1.7}}
 
 /* SERVICES */
 section{padding:96px 6%}
@@ -308,6 +224,23 @@ a.news-item:hover{background:#161b22}
 .news-item p{font-size:14px;color:var(--muted);line-height:1.8}
 .news-source{font-size:12px;font-weight:600;color:var(--accent);margin-top:12px;display:inline-block}
 
+/* OPERATIONS MEDIA */
+.ops-media{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:44px 0 0}
+.ops-media img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 25%;border-radius:4px;display:block}
+@media(max-width:820px){.ops-media{grid-template-columns:repeat(2,1fr)}}
+
+/* OPERATIONS HIGHLIGHTS */
+.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-top:48px}
+@media(max-width:820px){.op-grid{grid-template-columns:1fr}}
+.op-card{background:var(--bg);padding:28px 24px}
+.op-date{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:10px}
+.op-card h3{font-size:17px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-.3px}
+.op-card p{font-size:14px;color:var(--muted);line-height:1.8}
+
+/* SECTION "read more" LINK */
+.section-more{display:inline-block;margin-top:32px;font-size:14px;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:.3px;border-bottom:1px solid rgba(201,168,76,.35);padding-bottom:3px;transition:.2s}
+.section-more:hover{border-bottom-color:var(--accent)}
+
 /* FAQ */
 .faq-list{max-width:840px}
 .faq-item{border-bottom:1px solid var(--border);padding:24px 0}
@@ -328,23 +261,20 @@ a.news-item:hover{background:#161b22}
 .availability{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin-top:28px;padding:10px 20px;border:1px solid var(--border);border-radius:3px}
 .dot{width:8px;height:8px;background:#3fb950;border-radius:50%;animation:pulse 2s infinite}
 
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:28px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-footer p{font-size:12px;color:var(--muted)}
-footer a{font-size:12px;color:var(--muted);text-decoration:none}
-footer a:hover{color:var(--accent)}
 </style>
 </head>
 <body>
 
 <nav>
-<a href="/" class="logo" style="text-decoration:none">Admir <span>Barcic</span></a>
-<div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
-<a href="/about.html" class="nav-contact" style="border:none;background:transparent;padding:0">About</a>
-<a href="/capabilities.html" class="nav-contact" style="border:none;background:transparent;padding:0">Capabilities</a>
-<a href="/operations/" class="nav-contact" style="border:none;background:transparent;padding:0">Operations</a>
-<a href="#news" class="nav-contact" style="border:none;background:transparent;padding:0">News</a>
-<a href="/contact.html" class="nav-contact">Get In Touch</a>
+<a href="/" class="logo">Admir <span>Barcic</span></a>
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+<div class="nav-links" id="nav-links">
+<a href="/about.html" class="nav-link">About</a>
+<a href="/capabilities.html" class="nav-link">Capabilities</a>
+<a href="/operations/" class="nav-link">Operations</a>
+<a href="/#news" class="nav-link">News</a>
+<a href="/faq.html" class="nav-link">FAQ</a>
+<a href="/contact.html" class="nav-cta">Get In Touch</a>
 </div>
 </nav>
 
@@ -368,46 +298,31 @@ footer a:hover{color:var(--accent)}
 
 <p style="margin-bottom:40px">With over 28 years of field experience, his work spans Afghanistan, Ukraine, the Middle East, and Africa, with a particular focus on high-threat extractions, humanitarian corridors, and strategic evacuation logistics.</p>
 
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin:48px 0">
-<img src="admir-ops-1.jpg" alt="Admir Barčić coordinating field operations in a high-risk zone" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px">
-<img src="admir-ops-2.jpg" alt="Global crisis response operations overseen by Admir Barčić" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px">
-<img src="admir-ops-3.jpg" alt="Civilian evacuation operations coordinated by Admir Barčić" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px">
-<img src="admir-ops-4.jpg" alt="International security operations with Admir Barčić" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px">
+<div class="ops-media">
+<img src="admir-ops-1.jpg" alt="Admir Barčić coordinating field operations in a high-risk zone" width="961" height="1280" loading="lazy" decoding="async">
+<img src="admir-ops-2.jpg" alt="Global crisis response operations overseen by Admir Barčić" width="1280" height="885" loading="lazy" decoding="async">
+<img src="admir-ops-3.jpg" alt="Civilian evacuation operations coordinated by Admir Barčić" width="966" height="1210" loading="lazy" decoding="async">
+<img src="admir-ops-4.jpg" alt="International security operations with Admir Barčić" width="966" height="967" loading="lazy" decoding="async">
 </div>
 
-<h3 style="font-size:20px;font-weight:800;color:#fff;margin:56px 0 24px">Afghanistan Evacuations (2021–2022)</h3>
+<div class="op-grid">
+<div class="op-card">
+<div class="op-date">2021&ndash;2022 &middot; Afghanistan</div>
+<h3>Afghanistan Evacuations</h3>
 <p>During the collapse of Afghanistan in 2021, Admir Barčić played a key operational role in large-scale evacuation missions in cooperation with international partners, including humanitarian and non-governmental organizations such as Mercury One and the Nazarene Fund.</p>
-<p>These operations contributed to the evacuation of thousands of at-risk individuals, including women, children, government officials, judges, and military personnel.</p>
-<p>Barčić was directly involved in the coordination of evacuation routes, aircraft logistics, and the establishment of regional transit hubs, including Montenegro, which served as a temporary relocation and processing point for evacuees.</p>
-<p style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin:24px 0 12px">Featured Media</p>
-<p style="margin-bottom:12px;color:var(--muted)">Vijesti – Afghans in Montenegro for 35 million dollars</p>
-<p style="margin-bottom:12px;color:var(--muted)">Avaz – Afghan evacuations and regional operations</p>
-<p style="margin-bottom:12px"><a href="https://www.rferl.org/a/afghanistan-refugees-temporary-shelter/31436583.html" target="_blank" style="color:var(--muted);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);padding-bottom:4px">Radio Free Europe – Montenegro as a humanitarian evacuation hub</a></p>
-
-<h3 style="font-size:20px;font-weight:800;color:#fff;margin:56px 0 24px">Slovenia National Media Coverage</h3>
-<p>During the Afghanistan crisis, Admir Barčić was featured as a field expert and operational source in Slovenian national media, providing real-time insights into the situation on the ground.</p>
-<p>His reporting highlighted the security risks, collapse of institutional systems, and urgent evacuation needs during the Taliban takeover.</p>
-<p style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin:24px 0 12px">Featured Media</p>
-<p style="margin-bottom:12px;color:var(--muted)">24ur – Live reporting and field analysis from Afghanistan</p>
-
-<h3 style="font-size:20px;font-weight:800;color:#fff;margin:56px 0 24px">Refugee & Humanitarian Operations – Montenegro</h3>
-<p>As part of the Afghanistan evacuation efforts, Admir Barčić contributed to the development and execution of humanitarian relocation initiatives in Montenegro.</p>
-<p>These efforts included planning and coordination of temporary accommodation, logistics, and processing systems for evacuees in cooperation with international partners.</p>
-<p>Montenegro served as a strategic transit hub, enabling the safe relocation of evacuees onward to third countries.</p>
-
-<h3 style="font-size:20px;font-weight:800;color:#fff;margin:56px 0 24px">Gulf Crisis Evacuation (2026)</h3>
+</div>
+<div class="op-card">
+<div class="op-date">2026 &middot; Gulf region</div>
+<h3>Gulf Crisis Evacuation</h3>
 <p>In one of the most recent high-risk operations, Admir Barčić was involved in the evacuation of over 900 Slovenian citizens from an active conflict zone in the Gulf region.</p>
-<p>This complex mission required rapid coordination under volatile security conditions and involved multi-layered cooperation with governmental and intelligence structures.</p>
-<p>The operation was officially recognized by Slovenian state authorities and stands as one of the fastest and most efficient evacuation responses in the region.</p>
-<p style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin:24px 0 12px">Official Reference</p>
-<p>Government of Slovenia – "Evacuation of citizens from the Middle East"</p>
-
-<h3 style="font-size:20px;font-weight:800;color:#fff;margin:56px 0 24px">Ukraine & International Operations</h3>
+</div>
+<div class="op-card">
+<div class="op-date">Ongoing &middot; Ukraine</div>
+<h3>Ukraine &amp; International Operations</h3>
 <p>Admir Barčić has also participated in evacuation and crisis response operations related to the conflict in Ukraine, operating within multinational frameworks involving both governmental and private-sector coordination.</p>
-<p>His work in these environments focuses on secure extraction, risk mitigation, and operational planning in dynamic and hostile conditions.</p>
-
-<h3 style="font-size:20px;font-weight:800;color:#fff;margin:56px 0 24px">Operational Recognition & Industry Standing</h3>
-<p>Through decades of work in high-risk environments, Admir Barčić has earned formal recognition and partnerships with governments, international organizations, and private sector leaders worldwide.</p>
+</div>
+</div>
+<a class="section-more" href="/operations/">Read the full operational record &rarr;</a>
 </div>
 </section>
 
@@ -449,6 +364,7 @@ footer a:hover{color:var(--accent)}
 <p>Ground-level coordination for complex multi-jurisdictional operations. Local networks, documentation, and liaising with authorities.</p>
 </div>
 </div>
+<a class="section-more" href="/capabilities.html">See full capabilities &rarr;</a>
 </div>
 </section>
 
@@ -463,6 +379,7 @@ footer a:hover{color:var(--accent)}
 <p>Admir Barcic is a globally experienced security professional and the Founder of Zeus Actual Intelligence &amp; Security Agency, as well as Founder and Managing Director of Win-Win Solution — a consulting company specialising in business development, strategic advisory, security consulting, and international project development. He is a Board Member of the International Police Organization (IPO HQ) and a certified PMC Instructor with deep operational roots.</p>
 <p>War-experienced across Iraq, Afghanistan, Libya, South Sudan, Nigeria, and Ukraine — 28+ years as both operative and strategist. Former Co-Founder and Director of Shield Security Services, one of Afghanistan's leading private security companies. Previously International Business Development Manager at Evolution Global Risk Management, Global Director at SECU in Riyadh, and 14+ years as Global Business Development Director at Stratex Group across Europe and the Gulf.</p>
 <p>Based in Slovenia and Montenegro. Available internationally at short notice. All engagements handled with absolute discretion.</p>
+<a class="section-more" href="/about.html">Read the full background &rarr;</a>
 </div>
 </div>
 </div>
@@ -528,27 +445,8 @@ footer a:hover{color:var(--accent)}
 <h3>Where is Admir Barčić based and which regions does he cover?</h3>
 <p>He is based in Slovenia and Montenegro and operates worldwide, with particular depth across the United Kingdom, the Gulf/GCC region, the Balkans, Eastern Europe, the Middle East and Africa. He is available internationally at short notice.</p>
 </div>
-<div class="faq-item">
-<h3>What languages does Admir Barčić speak?</h3>
-<p>English, Slovenian and Bosnian at working level.</p>
 </div>
-<div class="faq-item">
-<h3>What major operations has Admir Barčić been involved in?</h3>
-<p>He played an operational role in the 2021–2022 Afghanistan evacuations (with partners including Mercury One and the Nazarene Fund), the 2026 Gulf crisis evacuation of over 900 Slovenian citizens recognised by the Government of Slovenia, humanitarian relocation through Montenegro, and crisis-response operations connected to the conflict in Ukraine.</p>
-</div>
-<div class="faq-item">
-<h3>How quickly can Admir Barčić respond to a crisis or extraction request?</h3>
-<p>Time from activation to wheels-up is typically measured in hours, not days. For urgent or time-sensitive requests, direct email to ab@admirbarcic.com is preferred.</p>
-</div>
-<div class="faq-item">
-<h3>Does Admir Barčić work with governments and NGOs as well as private clients?</h3>
-<p>Yes. He works with governments, international organisations, NGOs, corporations, high-net-worth individuals and diplomats. All engagements are handled with strict confidentiality.</p>
-</div>
-<div class="faq-item">
-<h3>How do you contact Admir Barčić?</h3>
-<p>Email ab@admirbarcic.com. Enquiries are handled confidentially, typically with a response within 24 hours.</p>
-</div>
-</div>
+<a class="section-more" href="/faq.html">See all questions &rarr;</a>
 </div>
 </section>
 
@@ -569,17 +467,19 @@ footer a:hover{color:var(--accent)}
 
 <footer>
 <p>&copy; 2026 Admir Barcic. All enquiries handled in strict confidence.</p>
-<div style="display:flex;gap:20px;flex-wrap:wrap">
+<div class="footer-links">
 <a href="/about.html">About</a>
 <a href="/capabilities.html">Capabilities</a>
 <a href="/operations/">Operations</a>
-<a href="#news">News</a>
-<a href="#faq">FAQ</a>
+<a href="/#news">News</a>
+<a href="/faq.html">FAQ</a>
 <a href="/contact.html">Contact</a>
+<a href="/privacy.html">Privacy</a>
 <a href="mailto:ab@admirbarcic.com">ab@admirbarcic.com</a>
 </div>
 </footer>
 
+<script src="/js/nav.js" defer></script>
 <script src="/js/lang-switcher.js" defer></script>
 <script src="/js/analytics.js" defer></script>
 

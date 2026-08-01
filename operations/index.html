@@ -29,18 +29,11 @@
 ]}
 ]}
 </script>
+<link rel="stylesheet" href="/css/site.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#0b0c0e;--surface:#111318;--border:#1e2229;--text:#e8eaed;--muted:#8b949e;--accent:#c9a84c;--accent-dim:rgba(201,168,76,.1)}
 html,body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:rgba(11,12,14,.92);backdrop-filter:blur(12px)}
-.logo{font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text);text-decoration:none}
-.logo span{color:var(--accent)}
-nav .nav-link{font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;padding:8px 0;letter-spacing:.5px;transition:.2s}
-nav .nav-link:hover{color:var(--accent)}
-nav .nav-cta{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid rgba(201,168,76,.4);padding:8px 18px;border-radius:4px;letter-spacing:.5px;transition:.2s}
-nav .nav-cta:hover{background:var(--accent-dim)}
-nav .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
 .hero{min-height:60vh;display:flex;align-items:center;padding:120px 6% 60px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,.06) 0%,transparent 60%)}
 .hero-inner{max-width:900px;position:relative;z-index:1}
@@ -58,7 +51,7 @@ strong{color:#fff}
 .divider{width:48px;height:1px;background:var(--accent);margin:48px 0;opacity:.5}
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin:32px 0 48px}
 @media(max-width:768px){.gallery{grid-template-columns:1fr}}
-.gallery img{width:100%;height:auto;border-radius:4px;display:block}
+.gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 25%;border-radius:4px;display:block}
 .media-list{margin:20px 0}
 .media-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:12px;display:block}
 .media-link{display:block;font-size:15px;color:var(--muted);text-decoration:none;margin-bottom:8px;line-height:1.6}
@@ -71,20 +64,17 @@ strong{color:#fff}
 .cta-btn:hover{opacity:.85}
 .back-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--accent);text-decoration:none;margin-bottom:40px;transition:.2s}
 .back-link:hover{opacity:.7}
-footer{border-top:1px solid var(--border);padding:28px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-footer p{font-size:12px;color:var(--muted);margin:0}
-footer a{font-size:12px;color:var(--muted);text-decoration:none}
-footer a:hover{color:var(--accent)}
 </style>
 </head>
 <body>
 
 <nav>
 <a href="/" class="logo">Admir <span>Barcic</span></a>
-<div class="nav-links">
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+<div class="nav-links" id="nav-links">
 <a href="/about.html" class="nav-link">About</a>
 <a href="/capabilities.html" class="nav-link">Capabilities</a>
-<a href="/operations/" class="nav-link">Operations</a>
+<a href="/operations/" class="nav-link" aria-current="page">Operations</a>
 <a href="/#news" class="nav-link">News</a>
 <a href="/faq.html" class="nav-link">FAQ</a>
 <a href="/contact.html" class="nav-cta">Get In Touch</a>
@@ -107,10 +97,10 @@ footer a:hover{color:var(--accent)}
 <p>With over 28 years of field experience, Admir Barčić's operational record spans Afghanistan, Ukraine, the Middle East, and Africa, with particular focus on high-threat extractions, humanitarian corridors, and strategic evacuation logistics.</p>
 
 <div class="gallery">
-<img src="admir-1.jpg" alt="Admir Barčić - Field Operations" width="800" height="533" loading="lazy" decoding="async">
-<img src="admir-2.jpg" alt="Global Crisis Response" width="800" height="533" loading="lazy" decoding="async">
-<img src="admir-3.jpg" alt="Evacuation Operations" width="800" height="533" loading="lazy" decoding="async">
-<img src="admir-4.jpg" alt="International Security Operations" width="800" height="533" loading="lazy" decoding="async">
+<img src="/admir-ops-1.jpg" alt="Admir Barčić - Field Operations" width="961" height="1280" loading="lazy" decoding="async">
+<img src="/admir-ops-2.jpg" alt="Global Crisis Response" width="1280" height="885" loading="lazy" decoding="async">
+<img src="/admir-ops-3.jpg" alt="Evacuation Operations" width="966" height="1210" loading="lazy" decoding="async">
+<img src="/admir-ops-4.jpg" alt="International Security Operations" width="966" height="967" loading="lazy" decoding="async">
 </div>
 
 <div class="divider"></div>
@@ -175,13 +165,19 @@ footer a:hover{color:var(--accent)}
 
 <footer>
 <p>&copy; 2026 Admir Barcic. All enquiries handled in strict confidence.</p>
-<div style="display:flex;gap:18px;flex-wrap:wrap">
+<div class="footer-links">
+<a href="/about.html">About</a>
+<a href="/capabilities.html">Capabilities</a>
+<a href="/operations/">Operations</a>
 <a href="/#news">News</a>
 <a href="/faq.html">FAQ</a>
+<a href="/contact.html">Contact</a>
+<a href="/privacy.html">Privacy</a>
 <a href="mailto:ab@admirbarcic.com">ab@admirbarcic.com</a>
 </div>
 </footer>
 
+<script src="/js/nav.js" defer></script>
 <script src="/js/lang-switcher.js" defer></script>
 <script src="/js/analytics.js" defer></script>
 
