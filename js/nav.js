@@ -2,7 +2,7 @@
 //
 // Below 900px the nav links collapse behind a hamburger button. This wires the
 // button to a single `open` class on <nav>; all the visual work lives in
-// css/site.css. Closes on link click, on Escape, on outside click, and on
+// css/site.css. Closes on link click, on Escape, on outside click and on
 // resize back up to desktop so the panel can't be left stranded open.
 (function () {
   'use strict';
